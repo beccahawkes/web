@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-gray-200/60 dark:border-gray-700/60 bg-white/70 dark:bg-gray-900/50 backdrop-blur">
+    <footer className="mt-auto border-t border-sage-300/60 bg-cream-50/90 backdrop-blur">
       <div className="mx-auto max-w-6xl px-6 py-6 flex items-center justify-between">
-        <p className="text-sm text-gray-600 dark:text-gray-300">© {new Date().getFullYear()} Becca Hawkes</p>
+        <p className="text-sm text-dgray-800">© {new Date().getFullYear()} Becca Hawkes</p>
         <div className="flex items-center gap-4">
           <a
             href="https://www.linkedin.com/in/becca-hawkes-a509b7123/"
             aria-label="LinkedIn"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+            className="text-dgray-700 hover:text-dgray-900 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
