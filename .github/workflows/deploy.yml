@@ -32,14 +32,12 @@ jobs:
 
       - name: Build
         env:
-          NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: /web
           NEXT_PUBLIC_ASSET_PREFIX: /web/
         run: npm run build
 
       - name: Export static site
         env:
-          NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: /web
           NEXT_PUBLIC_ASSET_PREFIX: /web/
         run: npx next export -o out
@@ -51,6 +49,15 @@ jobs:
             mkdir -p out/web
             mv out/_next out/web/_next
           fi
+
+      - name: Debug listing of exported files
+        run: |
+          echo "== out root =="
+          ls -la out || true
+          echo "== out/web =="
+          ls -la out/web || true
+          echo "== out/web/_next/static/chunks/app =="
+          ls -la out/web/_next/static/chunks/app || true
 
       - name: Create .nojekyll
         run: echo > out/.nojekyll

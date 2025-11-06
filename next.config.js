@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ''
 
 const nextConfig = {
   // Export a static site for GitHub Pages
@@ -8,9 +9,9 @@ const nextConfig = {
   trailingSlash: true,
   // Ensure next/image works in static export
   images: { unoptimized: true },
-  // Use basePath/assetPrefix in production so assets resolve under /web on GitHub Pages
-  basePath: isProd ? '/web' : undefined,
-  assetPrefix: isProd ? '/web/' : undefined,
+  // Use env so CI can set correct paths for project pages
+  basePath: basePath || undefined,
+  assetPrefix: assetPrefix || undefined,
 }
 
 module.exports = nextConfig
