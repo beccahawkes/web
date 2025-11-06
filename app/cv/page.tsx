@@ -174,7 +174,9 @@ export default function CVPage() {
             <ul className="space-y-4">
               <li>
                 <div className="rounded-lg bg-cream-50 ring-1 ring-sage-200 p-4">
-                  <p className="font-medium text-dgray-900">BSc Mathematics</p>
+                  <p className="font-medium text-dgray-900">
+                    BSc Mathematics (1st)
+                  </p>
                   <p className="text-sm text-dgray-700">
                     University of Bath · 2014 – 2017
                   </p>

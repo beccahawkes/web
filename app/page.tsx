@@ -3,7 +3,7 @@ import AboutMe from "./components/home/AboutMe";
 
 export default function Home() {
   return (
-    <div className="flex justify-between items-center mx-auto max-w-6xl px-6 py-16 text-dgray-900 pr-8">
+    <div className="flex justify-between sm:flex-row gap-8 flex-col-reverse items-center mx-auto max-w-6xl px-6 py-16 text-dgray-900 pr-8">
       <AboutMe />
       <Image
         src="/images/profile_pic.jpeg"

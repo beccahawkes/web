@@ -59,7 +59,7 @@ export const TimelineItem = ({
         <div>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center pt-4 gap-2 text-sm font-medium text-dgray-700 hover:text-dgray-900 transition-colors"
+            className="flex items-center pt-2 gap-2 text-sm font-medium text-dgray-700 hover:text-dgray-900 transition-colors"
             aria-expanded={isOpen}
             aria-controls={`accordion-content-${title.replace(/\s+/g, "-")}`}
           >

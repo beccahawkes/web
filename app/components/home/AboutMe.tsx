@@ -16,7 +16,7 @@ export default function AboutMe() {
       </p>
       <div className="flex flex-wrap items-center gap-3">
         <button
-          className="px-4 py-2 rounded-md bg-sage-600 text-white text-sm font-medium shadow hover:bg-sage-800 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          className="px-4 py-2 rounded-md bg-sage-700 text-white text-sm font-medium shadow hover:bg-sage-800 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
           onClick={() => router.push("/cv")}
         >
           See my CV
