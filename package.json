@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preexport": "rm -rf docs && mkdir -p docs",
+    "export": "next export -o docs",
+    "postexport": "touch docs/.nojekyll",
+    "deploy": "NEXT_PUBLIC_BASE_PATH=/web NEXT_PUBLIC_ASSET_PREFIX=/web/ npm run build && npm run export"
   },
   "dependencies": {
     "react": "^18.3.1",
