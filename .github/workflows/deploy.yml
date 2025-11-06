@@ -32,15 +32,25 @@ jobs:
 
       - name: Build
         env:
+          NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: /web
           NEXT_PUBLIC_ASSET_PREFIX: /web/
         run: npm run build
 
       - name: Export static site
         env:
+          NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: /web
           NEXT_PUBLIC_ASSET_PREFIX: /web/
         run: npx next export -o out
+
+      - name: Relocate _next under basePath
+        run: |
+          if [ -d "out/_next" ] && [ -d "out/web" ]; then
+            rm -rf out/web/_next
+            mkdir -p out/web
+            mv out/_next out/web/_next
+          fi
 
       - name: Create .nojekyll
         run: echo > out/.nojekyll
